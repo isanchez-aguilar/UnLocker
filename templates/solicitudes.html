@@ -1,0 +1,37 @@
+{% extends 'baseAdmin.html' %}
+
+{% block titulo %}Solicitud de locker{% endblock %}
+
+{% block contenido %}
+	<section class="contenedor">
+		<div id="saludo">
+			<h2>Solicitudes</h2>
+		</div>
+
+		<table width="80%" class="solicitudes">
+			<thead>
+				<tr>
+					<th>Boleta</th>
+					<th>Nombre</th>
+					<th>Fecha de solicitud</th>
+					<th>Accion</th>
+				</tr>
+			</thead>
+			<tbody>
+				{%for solicitud in solicitudes%}
+					<tr>
+						<td>{{ solicitud.boleta }}</td>
+						<td>{{ solicitud.nombre + ' ' + solicitud.primerApellido + ' ' + solicitud.segundoApellido }}</td>
+						<td>{{ solicitud.fecha }}</td>
+						<td>
+							<a href={{ '/aceptarSolicitud/' + solicitud.boleta | string }}>
+								<input type="submit" value="Aceptar" class="boton boton-vino"/>
+							</a>
+						</td>
+					</tr>
+				{%endfor%}
+
+			</tbody>
+		</table>
+	</section>
+{% endblock %}

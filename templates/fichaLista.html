@@ -1,0 +1,27 @@
+{% extends 'basePrincipal.html' %}
+
+{% block title %}Ficha lista{% endblock %}
+{% block contenido %}
+	<section class="contenedor">
+		<div id="saludo">
+			<h2>Tu posicion en la lista de espera es:</h2>
+		</div>
+
+		<div class="buscador-ficha">
+			<label for="boleta">Boleta:</label>
+			<input type="search" name="boleta" id="boleta"/>
+			<input type="button" name="buscar" class="boton" id="buscar" value="Buscar"/>
+		</div>
+
+		<div class="lista-espera">
+			<h4 id="mensaje" class="rojo"></h4>
+			<div class="lugar-lista" id="lugar-boleta">
+				
+			</div>
+			<a href={{ url_for('menuAlumno') }}>
+				<button class="boton boton-vino">Regresar</button>
+			</a>
+		</div>
+	</section>
+	<script src={{ url_for('static', filename='js/buscador.js') }}></script>
+{% endblock %}

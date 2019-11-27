@@ -1,0 +1,32 @@
+{% extends 'basePrincipal.html' %}
+
+{% block titulo %} Pagina principal {% endblock %}
+
+{% block contenido %}
+	<section class="contenedor">
+		<div id="saludo">
+			<h2>Bienvenido a Un-locker</h2>
+			<p>Seleccione una actividad para continuar.</p>
+		</div>
+
+		<div id="slider-principal">
+			<img src={{ url_for('static', filename='img/escom.jpg') }} alt="">
+		</div>
+
+		<div class="navegacion-acciones">
+			<div class="acciones">
+				<a href={{ url_for('login') }}>
+					<button class="boton boton-vino">
+						Iniciar sesión
+					</button>
+				</a>
+				
+				<a href={{ url_for('menuAlumno') }}>
+					<button class="boton boton-vino">
+						Estudiante
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}

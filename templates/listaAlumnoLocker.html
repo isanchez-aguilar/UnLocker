@@ -1,0 +1,33 @@
+{% extends 'baseAdmin.html' %}
+
+{% block titulo %}Solicitud de locker{% endblock %}
+
+{% block contenido %}
+	<section class="contenedor">
+		<div id="saludo">
+			<h2>Solicitudes</h2>
+		</div>
+
+		<table width="80%" class="solicitudes">
+			<thead>
+				<tr>
+					<th>Numero de locker</th>
+					<th>Boleta</th>
+					<th>Nombre</th>
+					<th>Correo</th>
+				</tr>
+			</thead>
+			<tbody>
+				{%for solicitud in solicitudes%}
+					<tr>
+						<td>{{ solicitud.locker }}</td>
+						<td>{{ solicitud.boleta }}</td>
+						<td>{{ solicitud.nombre + ' ' + solicitud.primerApellido + ' ' + solicitud.segundoApellido }}</td>
+						<td>{{ solicitud.correo }}</td>
+					</tr>
+				{%endfor%}
+
+			</tbody>
+		</table>
+	</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'basePrincipal.html' %}
+
+{% block titulo %} Solicitud de locker {% endblock %}
+
+{% block contenido %}
+	<section class="contenedor">
+		<div id="saludo">
+			<h2>Administrador</h2>
+		</div>
+		
+		<form action="{{ url_for('autentificar') }}" method="POST" class="solicitud-locker">
+			<div class="input-solicitud">
+				<label for="usuario">Usuario</label>
+				<input type="text" name="usuario" id="usuario" placeholder="Usuario" required/>
+			</div>
+			
+			<div class="input-solicitud">
+				<label for="contrasenia">Contraseña:</label>
+				<input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required/>
+			</div>
+			
+			<div class="submit-solicitud">
+				<input type="submit" value="Iniciar sesión" class="boton boton-vino"/>
+			</div>
+		</form>
+	</section>
+{% endblock %}

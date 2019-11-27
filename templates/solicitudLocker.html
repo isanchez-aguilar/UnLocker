@@ -1,0 +1,62 @@
+{% extends 'basePrincipal.html' %}
+
+{% block titulo %} Solicitud de locker {% endblock %}
+
+{% block contenido %}
+	<section class="contenedor">
+		<div id="saludo">
+			<h2>Solicitud de casillero</h2>
+			<p>
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						<span class={{aviso}}>{{ messages[0] }}</span>	
+					{% else %}
+						Para solicitar un casillero, por favor llene los siguientes campos:
+						
+					{% endif %}
+				{% endwith %}
+			</p>
+		</div>
+
+		<form class="solicitud-locker" method="POST" action={{ url_for('enviarSolicitud') }}>
+			<div class="input-solicitud">
+				<label for="nombres">Nombre(s):</label>
+				<input type="text" name="nombres" id="nombres" placeholder="Nombre(s)" required/>
+			</div>
+
+			<div class="input-solicitud">
+				<label for="primerApellido">Primer apellido:</label>
+				<input type="text" name="primerApellido" id="primerApellido" placeholder="Primer apellido" required/>
+			</div>
+
+			<div class="input-solicitud">
+				<label for="segundoApellido">Segundo apellido:</label>
+				<input type="text" name="segundoApellido" id="segundoApellido" placeholder="Segundo apellido" required/>
+			</div>
+	
+			<div class="input-solicitud">
+				<label for="boleta">Boleta:</label>
+				<input type="text" name="boleta" id="boleta" placeholder="Boleta" required/>
+			</div>
+
+			<div class="input-solicitud">
+				<label for="correo">Correo electronico:</label>
+				<input type="email" name="correo" id="correo" placeholder="Correo electronico" required/>
+			</div>
+
+			<div class="input-solicitud">
+				<label for="telefono">Telefono:</label>
+				<input type="tel" name="telefono" id="telefono" placeholder="Telefono" required/>
+			</div>
+
+			<div class="submit-solicitud">
+				<input type="submit" value="Enviar solicitud" class="boton boton-vino"/>
+			</div>
+		</form>
+	</section>
+	<footer class="boton-regresar">
+		<a href={{ url_for('menuAlumno') }}>
+			<button class="boton boton-vino">Regresar</button>
+		</a>
+	</footer>
+{% endblock %}
