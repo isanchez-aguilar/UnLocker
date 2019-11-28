@@ -1,5 +1,6 @@
 # pip install flask
 # pip install psycopg2
+
 # pip install Flask-Session
 
 from flask import Flask, render_template, request, flash, redirect, url_for, jsonify, make_response, session
@@ -34,7 +35,6 @@ def index():
 @app.route("/menuAlumno")
 def menuAlumno():
 	return render_template('menuAlumno.html')
-
 
 
 @app.route("/fichaLista")
@@ -190,6 +190,11 @@ def listaLockers():
 		return render_template('listaAlumnoLocker.html', solicitudes=solicitudes)
 	
 	return redirect(url_for('login'))
+
+@app.route('/contacto')
+def contacto():
+	
+	return render_template('contacto.html')
 
 if __name__ == "__main__":
     app.run(debug=True, port=3000)

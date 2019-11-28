@@ -4,6 +4,9 @@
 
 * {
 	box-sizing: border-box;
+	font-family:'Century Gothic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #595A5A;
+
 }
 
 body, html {
@@ -14,7 +17,10 @@ body, html {
 
 html {
 	font-size: 19px;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+	text-decoration: none;
 }
 
 input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
@@ -34,7 +40,29 @@ input[type="text"], input[type="password"], input[type="tel"], input[type="email
 	height: 100%;
 }
 
+#mapa {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.fondo{
+	
+	background-image: url('../img/fondo.png');
+	background-size: 100vw 100vh;
+
+}
+
+.saludo-index{
+	background-color: rgba(255,255,255,0.6);
+	height: 300px;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	margin-top: 2rem;
+	border-radius: 3px;
+}
 .contenedor {
+
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
@@ -88,18 +116,27 @@ input[type="text"], input[type="password"], input[type="tel"], input[type="email
 }
 
 .logo-pagina {
-	color: white;
-	height: 2.5rem;
-	font-size: 1.5rem;
+	height: 3rem;
 	border-radius: 4px;
 	text-align: center;
-	background-color: var(--vino);
 	text-decoration: none;
 }
 
 .navegacion-acciones .acciones {
-	margin-top: 1.5rem;
+	margin-top: 3rem;
 	text-align: center;
+}
+
+.navegacion-acciones .acciones .boton{
+	width: 35% !important;
+}
+
+.navegacion-acciones .acciones a:first-child{
+	margin-right: 3rem;	
+}
+
+.navegacion-acciones .acciones a:last-child{
+	margin-left: 3rem;	
 }
 
 .boton {
@@ -113,8 +150,6 @@ input[type="text"], input[type="password"], input[type="tel"], input[type="email
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
 	box-shadow: 2px 2px 2px 0 dimgray;
-
-
 	color: white;
 	background-color: var(--vino);
 }
@@ -165,6 +200,11 @@ footer.boton-regresar button {
 	grid-template-columns: 1fr 1fr;
 }
 
+.acciones-menu-alumno .boton{
+	width: 100%;
+}
+
+
 .imagen-menu, .accion-menu-alumno {
 	line-height: 200px;
 	text-align: center;
@@ -177,6 +217,7 @@ footer.boton-regresar button {
 .accion-menu-alumno .boton {
 	height: 3rem;
 	font-size: 1.25rem;
+	font-weight: bold;
 }
 
 /* Lista espera */

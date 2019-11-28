@@ -2,8 +2,8 @@ import psycopg2
 from datetime import datetime
 from configparser import ConfigParser
 
-semestreAnterior = '20-2'
-semestreActual = '21-1'
+semestreAnterior = '21-1'
+semestreActual = '21-2'
 
 def configurarBase(archivoConfiguracion='configuracionBase.ini', section='postgresql'):
 	parser = ConfigParser()
