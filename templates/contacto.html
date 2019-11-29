@@ -1,0 +1,60 @@
+{% extends 'basePrincipal.html' %}
+
+{% block titulo %}Menu alumno{% endblock %}
+
+{% block contenido %} 
+	
+	<section class="contenedor">
+		
+		<div id="mapa">
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1880.398981031485!2d-99.13029184154205!3d19.507326279155766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5f2dd0563ce99e8!2sEscuela%20Superior%20de%20C%C3%B3mputo!5e0!3m2!1ses!2smx!4v1574895830201!5m2!1ses!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+		</div>
+
+		<div>
+			<p>
+				Contáctanos en:
+			</p>
+
+			
+			<p class="informacion">
+				<span>
+					<img src={{ url_for('static', filename='img/direccion.png')  }} class="iconito"/>
+				</span> 
+				<span class="texto-info">
+					Escuela Superior de Cómputo. Av. Juan de Dios Bátiz S/N Nueva Industrial Vallejo, Gustavo A. Madero, 07738 Ciudad de México, CDMX.
+				</span>
+			</p>
+
+			<p class="informacion">
+				<span>
+					<img src={{ url_for('static', filename='img/correo.png')  }} class="iconito"/>
+				</span>
+				<span class="texto-info">
+					un-locker_escom@ipn.mx
+				</span>
+				<span class="texto-info">
+					asignacion_lockers@ipn.mx
+				</span>
+			</p>
+			<p class="informacion">
+				<span>
+					<img src={{ url_for('static', filename='img/telefono.png')  }} class="iconito"/>
+				</span>
+				<span class="texto-info">
+					62 63 41 47 Ext. 2410
+				</span>
+			</p>
+			<p class="informacion">
+				<span>
+					<img src={{ url_for('static', filename='img/celular.png')  }} class="iconito"/>
+				</span>
+				<span class="texto-info">
+					55 45 78 96 14
+				</span>
+			</p>
+			
+		</div>
+	</section>
+
+{%endblock%}
