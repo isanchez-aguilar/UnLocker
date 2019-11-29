@@ -1,0 +1,311 @@
+:root {
+	--vino: rgb(122, 22, 60);
+}
+
+* {
+	box-sizing: border-box;
+	font-family:'Century Gothic', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #595A5A;
+
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+html {
+	font-size: 19px;
+}
+
+a{
+	text-decoration: none;
+}
+
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
+	border-radius: 3px;
+	height: 1.5rem;
+	padding: 1rem;
+}
+
+#slider-principal {
+	width: 50%;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+}
+
+#slider-principal img {
+	height: 100%;
+}
+
+#mapa {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.fondo{
+	
+	background-image: url('../img/fondo.png');
+	background-size: 100vw 100vh;
+
+}
+
+.saludo-index{
+	background-color: rgba(255,255,255,0.6);
+	height: 300px;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	margin-top: 2rem;
+	border-radius: 3px;
+}
+.contenedor {
+
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.barra-navegacion {
+	display: grid;
+	border-style: solid;
+	padding-bottom: 0.7rem;
+	border-width: 0 0 5px 0;
+	grid-template-columns: 200px 9fr;
+	border-bottom-color: var(--vino);
+	justify-content: space-between;
+}
+
+.barra-navegacion .navegacion {
+	display: grid;
+	grid-column: 3 / 3;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.barra-navegacion .navegacion-admin {
+	display: grid;
+	grid-column: 3 / 3;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.navegacion .url {
+	border-style: solid;
+	border-width: 0 4px 0 0px;
+	border-color: var(--vino);
+	text-align: center;
+}
+
+.navegacion .url:last-child {
+	border-width: 0;
+}
+
+.navegacion .url a {
+	color: var(--vino);
+	text-decoration: none;
+}
+
+
+.navegacion .url:nth-child(2) a {
+	margin: 0 1rem;
+}
+
+.logo-pagina, .navegacion .url {
+	line-height: 2.5rem;
+}
+
+.logo-pagina {
+	height: 3rem;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.iconito {
+	height: 2rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+.informacion{
+	display: flex;
+	align-items: center;
+}
+
+.texto-info{
+	margin-left: 2rem;
+
+}
+
+.navegacion-acciones .acciones {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.navegacion-acciones .acciones .boton{
+	width: 35% !important;
+}
+
+.navegacion-acciones .acciones a:first-child{
+	margin-right: 3rem;	
+}
+
+.navegacion-acciones .acciones a:last-child{
+	margin-left: 3rem;	
+}
+
+.boton {
+	border: none;
+	height: 1.8rem;
+	cursor: pointer;
+	font-size: 0.8rem;
+	line-height: 1.8rem;
+	border-radius: 3px;
+	transition-delay: 0ms;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+	box-shadow: 2px 2px 2px 0 dimgray;
+	color: white;
+	background-color: var(--vino);
+}
+
+.boton:active {
+	transform: scale(0.80);
+	box-shadow: inset 2px 2px 2px 0 dimgray;
+}
+
+footer.boton-regresar {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+footer.boton-regresar button {
+	width: 30%;
+	font-size: 1.5rem;
+	height: 2.5rem;
+}
+
+/* Solicitiud Locker */
+.solicitud-locker {
+	width: 60%;
+	margin: auto;
+	margin-top: 3rem;
+}
+
+.solicitud-locker .input-solicitud {
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.input-solicitud {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.submit-solicitud {
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+/* Menu alumno */
+.acciones-menu-alumno {
+	display: grid;
+	margin-top: 2rem;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+.acciones-menu-alumno .boton{
+	width: 100%;
+}
+
+
+.imagen-menu, .accion-menu-alumno {
+	line-height: 200px;
+	text-align: center;
+}
+
+.acciones-menu-alumno img {
+	height: 200px;
+}
+
+.accion-menu-alumno .boton {
+	height: 3rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+/* Lista espera */
+.lista-espera {
+	text-align: center;
+}
+
+.lugar-lista {
+	color: white;
+	width: 300px;
+	height: 300px;
+	line-height: 300px;
+	font-size: 100px;
+	background-color: var(--vino);
+	border-radius: 50%;
+	margin: 3rem auto;
+}
+
+.lista-espera .boton {
+	height: 3rem;
+	font-size: 1.25rem;
+}
+
+.solicitudes {
+	margin: auto;
+}
+
+.solicitudes, .solicitudes > tr, .solicitudes tbody td {
+	border-style: solid;
+	border-width: 3px;
+	border-color: var(--vino);
+	text-align: center;
+}
+
+.solicitudes {
+	border-collapse: collapse;
+}
+
+.solicitudes thead {
+	color: white;
+	background-color: var(--vino);
+}
+
+.solicitudes thead th:not(:last-child) {
+	border-right: white 3px solid;
+}
+
+.buscador-ficha {
+	font-size: 1.2rem;
+}
+
+.buscador-ficha input {
+	width: 20rem;
+	height: 2rem;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.boton-confirmacion {
+	width: 70%;
+	display: block;
+	margin: 2rem auto;
+}
+
+.rojo {
+	color: red;
+}
+
+.verde {
+	color: green;
+}
+
+.oculto {
+	display: none;
+}
